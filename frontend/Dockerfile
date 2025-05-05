@@ -1,5 +1,5 @@
 # 1) Build
-FROM node:23-alpine-slim AS builder
+FROM node:23-alpine AS builder
 
 # Use the official Node.js image as a base image
 WORKDIR /app
