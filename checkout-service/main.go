@@ -15,7 +15,9 @@ func main() {
 	})
 
 	// Checkout endpoint
-	r.POST("/checkout", CheckoutHandler)
+	r.POST("/checkout", func(c *gin.Context) {
+		CheckoutHandler(c.Writer, c.Request)
+	})
 
 	// Start server
 	if err := r.Run(":8080"); err != nil {
