@@ -12,7 +12,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm run vite build
 
 # 2) Serve
 FROM nginx:stable-alpine
